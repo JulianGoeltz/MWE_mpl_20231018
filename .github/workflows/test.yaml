@@ -27,8 +27,8 @@ jobs:
       - name: plot with different combinations of backends, dpi
         run: |
           . venv/bin/activate
-          python test.py --backend TkAgg --dpi 50
-          python test.py --backend TkAgg --dpi 100
+          python test.py --backend Agg --dpi 50
+          python test.py --backend Agg --dpi 100
           python test.py --backend pgf --dpi 50
           python test.py --backend pgf --dpi 100
       - name: 'Upload PDFs as artifacts'
