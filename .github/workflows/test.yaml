@@ -27,7 +27,6 @@ jobs:
       - name: plot with different combinations of backends, dpi
         run: |
           . venv/bin/activate
-          python test.py --
           python test.py --backend TkAgg --dpi 50
           python test.py --backend TkAgg --dpi 100
           python test.py --backend pgf --dpi 50
@@ -36,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: figures
-          path: *.pdf
+          path: ./*.pdf
